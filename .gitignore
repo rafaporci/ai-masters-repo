@@ -1,0 +1,9 @@
+*.aux
+*.log
+*.gz
+.idea/*
+.vs/*
+
+challenge1-network-discovery/.idea/*
+challenge1-network-discovery/target/*
+challenge2-routing-optmizer/__pycache__/*

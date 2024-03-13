@@ -1,0 +1,56 @@
+package org.engcia.fc
+
+import org.engcia.engine.premiumservicessimulator.model.FactCF;
+import org.engcia.engine.premiumservicessimulator.model.Evidence;
+import org.engcia.engine.premiumservicessimulator.model.Hypothesis;
+import org.engcia.engine.premiumservicessimulator.listeners.TrackingAgendaListener;
+
+global org.engcia.engine.premiumservicessimulator.Context myContext;
+
+function void print(String str) {
+    System.out.println(str);
+}
+
+rule "r100:StandardShippingLessThan3Day"
+@CF(-0.6)
+lock-on-active true
+when
+    $e : Evidence( description == "StandardShippingInDays", Integer.parseInt(value) >= 0, Integer.parseInt(value) < 3)
+then
+	print("matched rule r100:StandardShippingLessThan3Day");
+	Hypothesis $h = (Hypothesis)myContext.getAgendaEventListener().getFactRef(Hypothesis.class, "selectPremium", "true"); // alterei de false -> true
+	$h.update();
+end
+
+rule "r101:VipCustomer"
+@CF(0.8)
+lock-on-active true
+when
+    Evidence( description == "VipCustomer", value == "true" )
+then
+    print("matched rule r101:VipCustomer");
+	Hypothesis $h = (Hypothesis)myContext.getAgendaEventListener().getFactRef(Hypothesis.class, "selectPremium", "true");
+	$h.update();
+end
+
+rule "r102:RichDestinationCountry"
+@CF(0.3)
+lock-on-active true
+when
+    Evidence( description == "RichDestinationCountry", value == "true" )
+then
+    print("matched rule r102:RichDestinationCountry");
+	Hypothesis $h = (Hypothesis)myContext.getAgendaEventListener().getFactRef(Hypothesis.class, "selectPremium", "true");
+    $h.update();
+end
+
+rule "r102:OrderAbove5000USD"
+@CF(0.7)
+lock-on-active true
+when
+    Evidence( description == "OrderAbove5000USD", value == "true" )
+then
+    print("matched rule r102:OrderAbove5000USD");
+	Hypothesis $h = (Hypothesis)myContext.getAgendaEventListener().getFactRef(Hypothesis.class, "selectPremium", "true");
+	$h.update();
+end

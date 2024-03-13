@@ -1,0 +1,288 @@
+/*
+ * Copyright 2015 Red Hat, Inc. and/or its affiliates.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
+package org.engcia;
+
+import org.engcia.engine.tradelanesdiscovery.model.TransportationLane
+import org.engcia.engine.tradelanesdiscovery.model.LogisticPoint
+import org.engcia.engine.tradelanesdiscovery.model.ServiceLevelType
+import org.engcia.engine.tradelanesdiscovery.model.TradeLane;
+
+import org.engcia.engine.tradelanesdiscovery.model.Evidence;
+import org.engcia.engine.tradelanesdiscovery.model.Conclusion;
+import org.engcia.engine.tradelanesdiscovery.model.Fact;
+
+global org.engcia.engine.tradelanesdiscovery.Context myContext;
+
+query "Conclusions"
+	$conclusion : Conclusion()
+end
+
+rule "r1"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+        eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Belgica,Italia,Franca,Espanha")) and
+		eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "China" )) and
+        eval(myContext.answer(Evidence.DESTINATION_STATE, "Beijing,Hebei,Shandong"))
+	then
+		Conclusion c = new Conclusion(
+		        new TradeLane(new TransportationLane[]{
+                    new TransportationLane(myContext.getOriginCountry(), myContext.getLogisticPointByName("Hong Kong"), "UPS", ServiceLevelType.Express),
+                    new TransportationLane(myContext.getLogisticPointByName("Hong Kong"), myContext.getDestinationState(), "SFExpress", ServiceLevelType.Express) },
+                    7,
+                    25.00F
+                    )
+                );
+		myContext.conclude(c);
+end
+
+rule "r2"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+        (
+            (
+            eval(myContext.answerNot(Evidence.ORIGIN_COUNTRY, "Belgica,Italia,Franca,Espanha")) and
+            eval(myContext.answer(Evidence.DESTINATION_STATE, "Beijing,Hebei,Shandong"))
+            )
+            or
+            (
+            eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Belgica,Italia,Franca,Espanha")) and
+            eval(myContext.answerNot(Evidence.DESTINATION_STATE, "Beijing,Hebei,Shandong"))
+            )
+            or
+            (
+            eval(myContext.answerNot(Evidence.ORIGIN_COUNTRY, "Belgica,Italia,Franca,Espanha")) and
+            eval(myContext.answerNot(Evidence.DESTINATION_STATE, "Beijing,Hebei,Shandong"))
+            )
+        )
+		eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "China" ))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Express)
+                        },
+                        7,
+                        25.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Standard)
+                        },
+                        15,
+                        15.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+
+rule "r3"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+        eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Mundo")) and
+		eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "Estados Unidos" )) and
+		eval(myContext.answer(Evidence.COLLECTION_POINT, "Home" ))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Express)
+                        },
+                        4,
+                        20.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Standard)
+                        },
+                        9,
+                        10.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+rule "r4"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+        eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Mundo")) and
+		eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "Estados Unidos" )) and
+		eval(myContext.answerNot(Evidence.COLLECTION_POINT, "Home" ))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Express)
+                        },
+                        4,
+                        20.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Standard)
+                        },
+                        10,
+                        10.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+rule "r5"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+        eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Reino Unido")) and
+        eval(myContext.answer(Evidence.ORIGIN_STATE, "Londres")) and
+		eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "Reino Unido" )) and
+		eval(myContext.answer(Evidence.DESTINATION_STATE, "Londres" ))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Express)
+                        },
+                        3,
+                        10.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Standard)
+                        },
+                        7,
+                        5.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "Metapack", ServiceLevelType.Premium)
+                        },
+                        1,
+                        20.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+rule "r6"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+	    eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Mundo" )) and
+        (   eval(myContext.answerNot(Evidence.ORIGIN_STATE, "Londres")) or
+            eval(myContext.answerNot(Evidence.DESTINATION_STATE, "Londres")))   and
+		eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "Reino Unido" ))
+
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Express)
+                        },
+                        5,
+                        15.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Standard)
+                        },
+                        10,
+                        10.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+rule "r7"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Outbound")) and
+	    eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Mundo" )) and
+        eval(myContext.answerNot(Evidence.DESTINATION_COUNTRY, "China")) and
+        eval(myContext.answerNot(Evidence.DESTINATION_COUNTRY, "Estados Unidos")) and
+        eval(myContext.answerNot(Evidence.DESTINATION_COUNTRY, "Reino Unido"))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Express)
+                        },6,20.00F
+                    ),
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Standard)
+                        },12,10.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+rule "r8"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Inbound")) and
+	    eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Espanha,Italia,Holanda")) and
+        eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "Europa"))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Standard)
+                        },
+                        1,
+                        1.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+rule "r9"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Inbound")) and
+	    eval(myContext.answerNot(Evidence.ORIGIN_COUNTRY, "Espanha,Italia,Holanda")) and
+        eval(myContext.answer(Evidence.DESTINATION_COUNTRY, "Europa"))
+	then
+		Conclusion c = new Conclusion(
+		        new TradeLane(new TransportationLane[]{
+                    new TransportationLane(myContext.getOriginCountry(), new LogisticPoint("Holanda"), "UPS", ServiceLevelType.Standard),
+                    new TransportationLane(new LogisticPoint("Holanda"), myContext.getDestinationCountry(), "UPS", ServiceLevelType.Standard)
+                    },
+                    1,
+                    1.00F
+                )
+        );
+		myContext.conclude(c);
+end
+
+rule "r10"
+	when
+	    eval(myContext.answer(Evidence.DELIVERY_TYPE, "Inbound")) and
+	    eval(myContext.answer(Evidence.ORIGIN_COUNTRY, "Mundo" )) and
+        eval(myContext.answerNot(Evidence.DESTINATION_COUNTRY, "Europa"))
+	then
+		Conclusion c = new Conclusion(
+                new TradeLane[]{
+                    new TradeLane(new TransportationLane[]{
+                        new TransportationLane(myContext.getOriginCountry(), myContext.getDestinationCountry(), "DHL", ServiceLevelType.Standard)
+                        },
+                        6,
+                        20.00F
+                    )
+                }
+        );
+        myContext.conclude(c);
+end
+
+
+query "evidence"(String ev, String v)
+	e : Evidence( evidence == ev, value == v )
+end
+
