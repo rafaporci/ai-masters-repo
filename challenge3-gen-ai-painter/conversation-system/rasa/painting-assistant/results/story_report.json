@@ -1,0 +1,69 @@
+{
+  "utter_describe_impressionism": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 50
+  },
+  "utter_describe_abstract_expressionism": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 50
+  },
+  "describe_impressionism": {
+    "precision": 0.43902439024390244,
+    "recall": 0.36,
+    "f1-score": 0.3956043956043956,
+    "support": 50
+  },
+  "describe_baroco": {
+    "precision": 0.40350877192982454,
+    "recall": 0.46,
+    "f1-score": 0.42990654205607476,
+    "support": 50
+  },
+  "utter_describe_baroco": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 50
+  },
+  "describe_abstract_expressionism": {
+    "precision": 0.4375,
+    "recall": 0.42,
+    "f1-score": 0.4285714285714286,
+    "support": 50
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 150
+  },
+  "micro avg": {
+    "precision": 0.8116591928251121,
+    "recall": 0.8044444444444444,
+    "f1-score": 0.8080357142857143,
+    "support": 450
+  },
+  "macro avg": {
+    "precision": 0.7542904517391038,
+    "recall": 0.7485714285714286,
+    "f1-score": 0.7505831951759855,
+    "support": 450
+  },
+  "weighted avg": {
+    "precision": 0.8088925735748586,
+    "recall": 0.8044444444444444,
+    "f1-score": 0.8060091518035443,
+    "support": 450
+  },
+  "accuracy": 0.8044444444444444,
+  "conversation_accuracy": {
+    "accuracy": 0.41333333333333333,
+    "correct": 62,
+    "with_warnings": 0,
+    "total": 150
+  }
+}

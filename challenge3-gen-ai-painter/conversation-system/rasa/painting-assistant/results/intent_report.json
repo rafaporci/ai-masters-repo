@@ -1,0 +1,77 @@
+{
+  "describe_impressionism": {
+    "precision": 0.9953748782862707,
+    "recall": 0.9997555012224939,
+    "f1-score": 0.9975603805806295,
+    "support": 4090,
+    "confused_with": {
+      "describe_baroco": 1
+    }
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 33,
+    "confused_with": {}
+  },
+  "describe_baroco": {
+    "precision": 0.9983586376692655,
+    "recall": 0.9983586376692655,
+    "f1-score": 0.9983586376692655,
+    "support": 2437,
+    "confused_with": {
+      "describe_impressionism": 4
+    }
+  },
+  "inform_painter": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 33,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 46,
+    "confused_with": {}
+  },
+  "describe_abstract_expressionism": {
+    "precision": 1.0,
+    "recall": 0.994612391499551,
+    "f1-score": 0.9972989195678271,
+    "support": 3341,
+    "confused_with": {
+      "describe_impressionism": 15,
+      "describe_baroco": 3
+    }
+  },
+  "inform_style": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 33,
+    "confused_with": {}
+  },
+  "accuracy": 0.9977029861180465,
+  "macro avg": {
+    "precision": 0.9991047879936481,
+    "recall": 0.9989609329130443,
+    "f1-score": 0.9990311339739603,
+    "support": 10013
+  },
+  "weighted avg": {
+    "precision": 0.9977113005283977,
+    "recall": 0.9977029861180465,
+    "f1-score": 0.9977027511086473,
+    "support": 10013
+  },
+  "micro avg": {
+    "precision": 0.9977029861180465,
+    "recall": 0.9977029861180465,
+    "f1-score": 0.9977029861180465,
+    "support": 10013
+  }
+}

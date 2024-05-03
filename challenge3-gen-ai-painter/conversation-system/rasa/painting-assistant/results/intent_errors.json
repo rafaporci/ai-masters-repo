@@ -1,0 +1,186 @@
+[
+  {
+    "text": "Her face looks so mangled it looks like a monster instead of a real person.",
+    "intent": "describe_impressionism",
+    "intent_prediction": {
+      "name": "describe_baroco",
+      "confidence": 0.9262818098068237
+    }
+  },
+  {
+    "text": "The earthy, warm colors make me feel contentment towards this painting.",
+    "intent": "describe_baroco",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.5062955021858215
+    }
+  },
+  {
+    "text": "The color of her outfit blends in too much with the background.",
+    "intent": "describe_baroco",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.8555444478988647
+    }
+  },
+  {
+    "text": "the brush strokes and the colors used makes this look really real",
+    "intent": "describe_baroco",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9979925155639648
+    }
+  },
+  {
+    "text": "The brown almost blends with the background of the painting to well",
+    "intent": "describe_baroco",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9947443008422852
+    }
+  },
+  {
+    "text": "How our life is filled with different feeling and event but in the in even how hard, thing will work out",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_baroco",
+      "confidence": 0.561107873916626
+    }
+  },
+  {
+    "text": "It is boring overall, but a bit interesting with the image of people inside.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9984867572784424
+    }
+  },
+  {
+    "text": "I love all of the colors in this picture. The bright colors are amazing and I love all the lines.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.5517261624336243
+    }
+  },
+  {
+    "text": "The mountains are full of color even in the wintertime",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.7990721464157104
+    }
+  },
+  {
+    "text": "For being a very simple painting it makes be feel happy as the person in this painting looks happy and amused",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_baroco",
+      "confidence": 0.861355721950531
+    }
+  },
+  {
+    "text": "the blue and green is soothing with the tiny pops of colour",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.6586286425590515
+    }
+  },
+  {
+    "text": "The empty field of small trees and rocks makes me feel calm from just looking at this picture.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9935577511787415
+    }
+  },
+  {
+    "text": "The dull colors remind me of a sandy warm area.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.6876968145370483
+    }
+  },
+  {
+    "text": "The painting is very appealing, with a unique balance between hot and cold colors, as well as brushstrokes.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9704076051712036
+    }
+  },
+  {
+    "text": "The colors blend very nicely together to create an interesting but peaceful picture.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.789900541305542
+    }
+  },
+  {
+    "text": "I love the different shades of orange. I see a comfy cozy warm room and the red square is a window to the outside. Makes me feel good.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.97906494140625
+    }
+  },
+  {
+    "text": "The warm colors make me feel safe.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9999083280563354
+    }
+  },
+  {
+    "text": "It's so much fun to paint with all the colors!",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.7434424757957458
+    }
+  },
+  {
+    "text": "A splash of color is a good and relaxing day at the beach during the end of the fall.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.8821386098861694
+    }
+  },
+  {
+    "text": "Life in the process of being created with all of its glory, shine, and mystery.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_baroco",
+      "confidence": 0.7525236010551453
+    }
+  },
+  {
+    "text": "The scratches all over the page makes me think of people dancing all around",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.5907318592071533
+    }
+  },
+  {
+    "text": "While the colors are appealing, I can't even tell what the picture is supposed to be. Just looks like a bunch of brush strokes.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.8935219049453735
+    }
+  },
+  {
+    "text": "The bright orange and red colors really make this painting stand out to me.  I can't make out if the artist was attempting to paint certain figures or people, but the color combination is nice.",
+    "intent": "describe_abstract_expressionism",
+    "intent_prediction": {
+      "name": "describe_impressionism",
+      "confidence": 0.9142912030220032
+    }
+  }
+]

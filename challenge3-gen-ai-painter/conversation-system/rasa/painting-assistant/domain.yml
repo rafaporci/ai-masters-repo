@@ -1,0 +1,52 @@
+version: "3.1"
+
+entities:
+  - painter
+  - style
+
+intents:
+  - greet
+  - describe_impressionism
+  - describe_baroco
+  - describe_abstract_expressionism
+  - inform_painter
+  - inform_style
+  - fallback
+  
+responses:
+  utter_greet:
+  - text: "Hello! Please tell me some aspects that you really love in a painting!"
+  - text: "Hello there! Welcome to our art chat. What aspects of painting inspire you the most?"
+  - text: "Greetings! It's wonderful to have you here. What do you admire most in a painting?"
+  utter_describe_impressionism:
+  - text: "Nice, it seems impressionism is your preferred style, I will start to customize your photo."
+  - text: "Ah, impressionism! A beautiful choice. Let's infuse that impressionistic charm into your photo."
+  - text: "Impressionism, a timeless style. Let's begin adding that impressionistic flair to your photo."
+  utter_describe_baroco:
+  - text: "Nice, it seems baroco is your preferred style, I will start to customize your photo."
+  - text: "Baroque art, intricate and grand. Let's infuse that baroque essence into your photo."
+  - text: "Baroque, a style of opulence and drama. Let's start incorporating that into your photo."
+  utter_describe_abstract_expressionism:
+  - text: "Nice, it seems abstract expressionism is your preferred style, I will start to customize your photo."  
+  utter_inform_painter:
+  - text: "Nice, I will start to customize your photo."
+  - text: "Noted! Let's get started on transforming your photo into a masterpiece."
+  - text: "Got it! Let's begin enhancing your photo with artistic touches."
+  utter_inform_style:
+  - text: "Nice, I will start to customize your photo."
+  - text: "Understood! Let's proceed to customize your photo with your preferred style."
+  - text: "Acknowledged! Let's infuse your chosen style into your photo."
+  utter_describe_outofscope:
+  - text: "That information is outside of my area of expertise, let's talk about art!"
+  - text: "I am a chatbot that focuses on art! Describe some aspects that you really love in a painting."
+  - text: "That's a bit beyond my expertise. Let's refocus on the world of art. What inspires you?"
+  - text: "Art is my specialty! Let's steer our conversation back to the wonderful realm of creativity."
+  utter_default:
+  - text: "Sorry I didn't get that. Can you rephrase?"
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
+  - text: "Apologies, I'm still learning. Could you provide more context or rephrase your statement?"
+  - text: "I'm still honing my skills. Can you provide more details or rephrase what you said?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

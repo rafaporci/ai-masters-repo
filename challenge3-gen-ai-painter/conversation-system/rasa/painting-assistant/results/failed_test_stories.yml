@@ -1,0 +1,354 @@
+version: "3.1"
+stories:
+- story: impressionism 50 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists captured the beauty of the ephemeral moment in their work.
+  - action: utter_describe_impressionism
+- story: abstract_expressionism 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: emerged as a revolutionary artistic movement in the early 20th century.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: sought to unlock the power of the unconscious mind.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 3 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: artists explored dreams, fantasies, and the subconscious in their work.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 4 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: challenged traditional notions of reality and representation.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 6 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: nlu_fallback: artists employed automatic techniques to tap into their subconscious minds.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 7 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: was influenced by Freudian psychology and the theories of the unconscious.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 8 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: paintings often depict bizarre and fantastical scenes.
+  - action: utter_describe_abstract_expressionism
+- story: describe_baroco 10 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: artists use diagonals to create a sense of movement and tension.
+  - action: utter_describe_baroco
+- story: abstract_expressionism 10 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: sought to liberate the creative potential of the unconscious.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 11 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: imagery is often unsettling and disorienting.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 12 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: artists used collage and assemblage to create dreamlike compositions.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 13 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: was deeply influenced by the political and social turmoil of the early 20th century.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 14 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: art often explores themes of desire, repression, and the subconscious mind.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 15 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: painters employed techniques such as frottage and decalcomania to create textured surfaces.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 16 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: artists sought to challenge the constraints of rational thought and conventional morality.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 17 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: poetry often employs automatic writing techniques to bypass conscious control.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 18 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: sought to bridge the gap between conscious and unconscious experience.
+  - action: utter_describe_abstract_expressionism
+- story: baroco 11 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: art celebrates the grandeur and power of the Church.
+  - action: utter_describe_baroco
+- story: abstract_expressionism 20 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: art often features dreamlike landscapes and fantastical creatures.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 21 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: celebrated the power of imagination and creativity.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 22 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: artists were inspired by the works of Freud, Jung, and other psychoanalysts.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 23 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: paintings often blur the boundaries between reality and fantasy.
+  - action: utter_describe_abstract_expressionism
+- story: baroco 12 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: artists manipulate space to create a sense of immersion.
+  - action: utter_describe_baroco
+- story: abstract_expressionism 30 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: challenged the distinction between the conscious and unconscious mind.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 34 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: sought to create a new visual language that transcended rationality.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 35 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: artists were deeply influenced by the theories of the Marquis de Sade.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 36 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_baroco: paintings often explore themes of transformation and metamorphosis.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 40 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: sought to challenge the authority of reason and logic.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 41 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: paintings often evoke a sense of psychological tension and unease.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 43 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: sought to liberate the unconscious mind from the constraints of society.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 48 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: artists sought to create a sense of wonder and astonishment in their viewers.
+  - action: utter_describe_abstract_expressionism
+- story: abstract_expressionism 49 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_abstract_expressionism  # predicted: describe_impressionism: challenged conventional notions of beauty and aesthetics.
+  - action: utter_describe_abstract_expressionism
+- story: baroco 14 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: nlu_fallback: painting conveys a sense of immediacy and emotional intensity.
+  - action: utter_describe_baroco
+- story: baroco 15 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: artists employ foreshortening to create dramatic perspectives.
+  - action: utter_describe_baroco
+- story: baroco 17 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: art embraces the theatricality of the human form.
+  - action: utter_describe_baroco
+- story: baroco 18 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: architecture often incorporates illusionistic elements.
+  - action: utter_describe_baroco
+- story: baroco 19 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: painting showcases virtuoso brushwork and vivid colors.
+  - action: utter_describe_baroco
+- story: describe_baroco 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: art seeks to captivate the viewer with its dramatic intensity.
+  - action: utter_describe_baroco
+- story: baroco 20 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: artists depict scenes of ecstasy and agony with fervent emotion.
+  - action: utter_describe_baroco
+- story: baroco 23 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: art challenges traditional notions of beauty and harmony.
+  - action: utter_describe_baroco
+- story: baroco 24 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: artists manipulate scale to create dramatic effects.
+  - action: utter_describe_baroco
+- story: baroco 29 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: artists employ dynamic compositions to engage the viewer.
+  - action: utter_describe_baroco
+- story: describe_baroco 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: out_of_scope: art embodies a dynamic energy and movement.
+  - action: utter_describe_baroco
+- story: baroco 30 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: painting conveys a sense of opulence and luxury.
+  - action: utter_describe_baroco
+- story: baroco 31 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: architecture incorporates elements of illusion and surprise.
+  - action: utter_describe_baroco
+- story: baroco 35 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: painting often features intricate symbolism and allegory.
+  - action: utter_describe_baroco
+- story: baroco 36 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: architecture evokes a sense of theatricality and spectacle.
+  - action: utter_describe_baroco
+- story: describe_baroco 3 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: artists aim to evoke emotional responses in the viewer.
+  - action: utter_describe_baroco
+- story: baroco 42 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: nlu_fallback: sculpture captures the essence of human emotion and passion.
+  - action: utter_describe_baroco
+- story: baroco 43 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: art reflects the tensions between tradition and innovation.
+  - action: utter_describe_baroco
+- story: baroco 44 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: artists experiment with unconventional perspectives and compositions.
+  - action: utter_describe_baroco
+- story: baroco 46 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: architecture seeks to overwhelm the viewer with its grandeur.
+  - action: utter_describe_baroco
+- story: baroco 47 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: sculpture embodies the ideals of the Counter-Reformation.
+  - action: utter_describe_baroco
+- story: describe_baroco 4 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: art revels in theatricality and spectacle.
+  - action: utter_describe_baroco
+- story: baroco 50 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_impressionism: painting invites the viewer into a world of fantasy and wonder.
+  - action: utter_describe_baroco
+- story: impressionism 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: painters sought to capture the fleeting effects of light and color.
+  - action: utter_describe_impressionism
+- story: impressionism 3 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: broke away from traditional techniques and subject matter.
+  - action: utter_describe_impressionism
+- story: impressionism 4 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists painted en plein air to capture the immediacy of their surroundings.
+  - action: utter_describe_impressionism
+- story: impressionism 5 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: emphasized the subjective experience of the artist.
+  - action: utter_describe_impressionism
+- story: impressionism 7 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: brushwork is characterized by loose, visible strokes.
+  - action: utter_describe_impressionism
+- story: impressionism 8 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists rejected academic conventions in favor of individual expression.
+  - action: utter_describe_impressionism
+- story: impressionism 9 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: color palettes are vibrant and unconventional.
+  - action: utter_describe_impressionism
+- story: impressionism 10 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: landscapes convey a sense of atmosphere and mood.
+  - action: utter_describe_impressionism
+- story: impressionism 11 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: paintings evoke a sense of movement and vitality.
+  - action: utter_describe_impressionism
+- story: impressionism 12 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists captured the effects of changing light and weather conditions.
+  - action: utter_describe_impressionism
+- story: impressionism 13 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: challenged traditional notions of perspective and composition.
+  - action: utter_describe_impressionism
+- story: impressionism 14 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: paintings often feature scenes of leisure and modern life.
+  - action: utter_describe_impressionism
+- story: impressionism 15 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: artists embraced the use of complementary colors to create harmonious compositions.
+  - action: utter_describe_impressionism
+- story: impressionism 16 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: brushwork imparts a sense of spontaneity and fluidity.
+  - action: utter_describe_impressionism
+- story: impressionism 17 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: artists explored the interplay between light and shadow.
+  - action: utter_describe_impressionism
+- story: impressionism 19 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: paintings convey a sense of immediacy and sensory experience.
+  - action: utter_describe_impressionism
+- story: impressionism 20 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists sought to capture the essence of a moment in time.
+  - action: utter_describe_impressionism
+- story: impressionism 22 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists rejected the idealized representations of the academic tradition.
+  - action: utter_describe_impressionism
+- story: impressionism 23 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: celebrated the beauty of everyday life.
+  - action: utter_describe_impressionism
+- story: impressionism 27 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: compositions are characterized by their informal and asymmetrical arrangements.
+  - action: utter_describe_impressionism
+- story: impressionism 29 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: emphasized the sensory experience of sight.
+  - action: utter_describe_impressionism
+- story: describe_baroco 7 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_baroco  # predicted: describe_abstract_expressionism: architecture employs elaborate ornamentation and decoration.
+  - action: utter_describe_baroco
+- story: impressionism 30 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists captured the fleeting moments of daily life.
+  - action: utter_describe_impressionism
+- story: impressionism 33 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: artists embraced the use of unconventional perspectives.
+  - action: utter_describe_impressionism
+- story: impressionism 36 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists celebrated the beauty of natural light.
+  - action: utter_describe_impressionism
+- story: impressionism 38 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: paintings often depict scenes of leisure and recreation.
+  - action: utter_describe_impressionism
+- story: impressionism 40 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_abstract_expressionism: artists captured the essence of modern life in their paintings.
+  - action: utter_describe_impressionism
+- story: impressionism 42 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: paintings convey a sense of fleetingness and transience.
+  - action: utter_describe_impressionism
+- story: impressionism 43 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists sought to capture the essence of a momentary impression.
+  - action: utter_describe_impressionism
+- story: impressionism 44 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: celebrated the ordinary and the everyday.
+  - action: utter_describe_impressionism
+- story: impressionism 46 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: landscapes are imbued with a sense of movement and atmosphere.
+  - action: utter_describe_impressionism
+- story: impressionism 47 (.\tests\test_stories.yml)
+  steps:
+  - intent: describe_impressionism  # predicted: describe_baroco: artists embraced the use of natural light in their paintings.
+  - action: utter_describe_impressionism
