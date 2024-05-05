@@ -9,3 +9,7 @@ Expert System: Java solution using Drools rules engine to discover tradelanes (r
 ## Challenge 2:
 
 Machine Learning and Optimization Algoritms: Python solution to forecast sales and propose the optimal route for a set of vehicles distribute the stock according to demand.
+
+## Challenge 3:
+
+Conversational Systems and Generative AI Image-to-Image models: CycleGAN model to customize photos using famous painters style and Rasa ChatBot to explore the user art preferences.
